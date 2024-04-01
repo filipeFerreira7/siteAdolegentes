@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#mainNav{
+    height: 10vh;
+    max-width: 120vh;
+    background-color: transparent;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    size: 50vh;
+    transition: background-color 0.4s,margin-top 0.5s, margin-left 0.5s;
+    visibility: hidden;
+    
+}
+
+#mainNav .navbar-brand {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav a.navbar-brand {
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.75,0.2);
+    
+  }
+  #mainNav span{
+    color: green;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(1, 94, 1));
+    background-clip: text;
+  }
+  #mainNav .nav-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  #mainNav .nav-link:active {
+    color: #fff;
+  }
+  #mainNav.navbar-shrink {
+    margin-top: 1%;
+    background-color: rgba(248, 248, 248, 0.233);
+    margin-left: 1%;
+    
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #f1f1f1;
+  }
+  #mainNav.navbar-shrink .nav-link {
+    color: #e2dddd;
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-bottom: 0.25rem solid transparent;
+  }
+  #mainNav.navbar-shrink .nav-link:hover {
+    color: #64a19d;
+  }
+  #mainNav.navbar-shrink .nav-link:active {
+    color: #467370;
+  }
+  #mainNav.navbar-shrink .nav-link.active {
+    color: #64a19d;
+    outline: none;
+    border-bottom: 0.25rem solid #64a19d;
+  }
+  .masthead {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    height: auto;
+    padding: 20rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 80%, #000 100%), url("../assets/img/ADOLEGENTES ADOLEGENTES.jpg");
+    padding-top: 40%;
+    background-position: center;
+    transition: transform 0.3s ease;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixa o background */
+    background-size: cover;
+}
+
+.masthead .img-background .about-section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    transition: transform 0.3s ease; /* Adiciona transição */
+}
+
+/* Adiciona o efeito parallax */
+@media (min-width: 992px) {
+    .masthead {
+        background-attachment: fixed;
+    }
+
+    .masthead .img-background {
+        position: fixed;
+        z-index: -1;
+        transform: translateZ(0); /* Ativa o aceleramento por GPU para melhor desempenho */
+    }
+}
+
+ h1.move-down-text{
+  font-family: "Acme", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  
+}
+
+
+.about-section {
+  padding-top: 70%;
+  background-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%), url("../assets/img/FullSizeRender_VSCO 2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+
+#mural{
+  padding-top:40%;
+  width: 100%;
+  height:100%;
+  background-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0.3) 100%), url("../assets/img/eita.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+
+
+.projects-section .featured-text {
+  padding: 2rem;
+}
+@media (min-width: 992px) {
+  .projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+  }
+}
+.projects-section .project-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+@media (min-width: 992px) {
+  .projects-section .project-text {
+    padding: 5rem;
+  }
+}
+
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: rgba(136, 124, 124, 0.863);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+};
+
+#mainNav.navbar-shrink .nav-link:hover {
+  color: rgba(136, 124, 124, 0.863);
+}
+#mainNav.navbar-shrink .nav-link.active {
+  color: #fff;
+  outline: none;
+  border-bottom: 0.25rem solid rgba(255, 255, 255, 0.3);
+}
+
+#mural .gallery {
+  margin: 0 auto; /* Para centralizar o carrossel horizontalmente */
+  max-width: 1000px; /* Define a largura máxima do carrossel */
+  padding: 20px; /* Adiciona um espaço ao redor do carrossel */
+  margin-left: 15%;
+  
+}
+
+.carousel {
+  top: -70%;
+  width: 85%; /* Garante que o carrossel ocupe todo o espaço disponível */
+}
+
+.carousel-inner {
+  border-radius: 10px; /* Adiciona bordas arredondadas ao carrossel */
+}
+
+.carousel-item img {
+  border-radius: 10px; /* Adiciona bordas arredondadas às imagens */
+  object-fit: cover; /* Garante que as imagens mantenham a proporção e preencham o espaço disponível */
+  max-height: 400px; /* Define a altura máxima das imagens */
+}
+
+.text-carousel {
+  margin-bottom: 15%; /* Adicione um espaçamento entre o título e o carrossel */
+}
+
+.text-carousel h2{
+  font-family: "Acme", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  
+}
+
