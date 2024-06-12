@@ -13,6 +13,7 @@ body {
     transition: background-color 0.4s,margin-top 0.5s, margin-left 0.5s;
     visibility: hidden;
     
+    
 }
 
 #mainNav .navbar-brand {
@@ -68,18 +69,23 @@ body {
     border-bottom: 0.25rem solid #64a19d;
   }
   .masthead {
-    position: relative;
     width: 100%;
     background-color: #000;
     height: auto;
-    padding: 20rem 0;
+    padding: 20% 0; /* Alterado para usar porcentagem */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 80%, #000 100%), url("../assets/img/ADOLEGENTES ADOLEGENTES.jpg");
-    padding-top: 40%;
+    padding-top: 40%; /* Removido o padding-top redundante */
     background-position: center;
     transition: transform 0.3s ease;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Fixa o background */
     background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .masthead {
+        padding: 40% 0; /* Ajuste do padding para telas menores */
+    }
 }
 
 .masthead .img-background .about-section{
@@ -92,6 +98,10 @@ body {
     background-size: cover;
     z-index: -1;
     transition: transform 0.3s ease; /* Adiciona transição */
+}
+
+img.img-background{
+  background-image: none;
 }
 
 /* Adiciona o efeito parallax */
@@ -114,18 +124,26 @@ body {
   font-style: normal;
   color: #fff;
   text-align: center;
-  
 }
 
 
+
 .about-section {
-  padding-top: 70%;
+  padding-top: 74%;
   background-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%), url("../assets/img/FullSizeRender_VSCO 2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   transition: transform 0.3s ease;
+}
+
+
+.about-section h2, .about-section p{
+  position: absolute;
+  top: 170%;
+  text-align: center;
+  align-items: center;
 }
 
 
@@ -162,6 +180,7 @@ body {
   }
 }
 
+
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
@@ -187,7 +206,7 @@ body {
 }
 
 .carousel {
-  top: -70%;
+  top: -40%;
   width: 85%; /* Garante que o carrossel ocupe todo o espaço disponível */
 }
 
@@ -196,9 +215,11 @@ body {
 }
 
 .carousel-item img {
-  border-radius: 10px; /* Adiciona bordas arredondadas às imagens */
+  border-radius: 30px; /* Adiciona bordas arredondadas às imagens */
   object-fit: cover; /* Garante que as imagens mantenham a proporção e preencham o espaço disponível */
-  max-height: 400px; /* Define a altura máxima das imagens */
+  max-height: 820px; /* Define a altura máxima das imagens */
+  max-width: 1000px;
+  
 }
 
 .text-carousel {
@@ -215,3 +236,10 @@ body {
   
 }
 
+.contact-section{
+  padding-top: 5rem;
+}
+.bg-black {
+  --bs-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, 0.644)!important;
+}
