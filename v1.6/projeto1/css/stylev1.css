@@ -241,5 +241,5 @@ img.img-background{
 }
 .bg-black {
   --bs-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, 0.644)!important;
+  background-color: rgb(0, 0, 0)!important;
 }
